@@ -397,12 +397,6 @@ async def aigc_check(file: UploadFile,device,model,tokenizer):
 
     # 再把表格1移动到标题后
     move_table_after(table3, doc_output.paragraphs[0])
-
-    doc_output.paragraphs[0].insert_paragraph_before()
-    run=doc_output.paragraphs[0].add_run()
-    run.add_picture('static/dragonos.jpg', width=Inches(5.00), height=Inches(2.655))
-    doc_output.paragraphs[0].alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
-
     # 将标题插入开头
     doc_output.paragraphs[1].insert_paragraph_before("AIGC检测报告")
     # 设置段落居中对齐
@@ -421,14 +415,8 @@ async def aigc_check(file: UploadFile,device,model,tokenizer):
     # # 设置页眉居中对齐
     # header_paragraph.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
 
-    # 在末尾增加一段
-    last_paragraph = doc_output.add_paragraph()
 
-    # 在该段落中插入图片
-    run = last_paragraph.add_run()
-    run.add_picture('static/dragonos.jpg', width=Inches(5.00), height=Inches(2.655))
 
-    last_paragraph.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
 
     doc_output.save(output_file_path)
 
