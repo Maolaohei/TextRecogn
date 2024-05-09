@@ -7,9 +7,13 @@ python =3.9
 pip install -r requirements.txt
 
 #运行
+```shell
+//运行服务器
 python main.py
+//开始查重
 python check.py
-会自动为input文件夹下面的文章生成查重记录
+```
+会自动为input文件夹下面的文章生成查重记录，结果在output
 
 ## 在线体验
 
