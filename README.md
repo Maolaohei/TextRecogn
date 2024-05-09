@@ -1,5 +1,15 @@
+
 # TextRecogn
 Uncovering AIGC Texts with Machine Learning
+
+#部署
+python =3.9
+pip install -r requirements.txt
+
+#运行
+python main.py
+python check.py
+会自动为input文件夹下面的文章生成查重记录
 
 ## 在线体验
 
